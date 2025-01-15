@@ -19,11 +19,8 @@ scikit-learn
 dill
 keras
 wordcloud
-Flask
-Werkzeug
 numpy
 pandas
-opencv-python
 argparse
 scipy
 dlib

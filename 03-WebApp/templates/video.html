@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/static/CSS/style.css">
+    <title>Interview Simulator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <a href="/">
+        <img src="/static/CSS/images/video_head.png" width="100%">
+    </a>
+
+    {% block body %}
+
+    <blockquote>
+        <p class="quotation">Tell us about the last time you showed leadership.</p>
+    </blockquote> 
+
+    <!-- Display video stream -->
+    <img src="{{ url_for('video_feed') }}" width="100%">
+
+    <script>
+      // Automatically redirect to /video_dash after 45 seconds
+      setTimeout(function() {
+          window.location.href = "/video_dash";
+      }, 45000);  // 45000 milliseconds = 45 seconds
+    </script>
+
+    {% endblock %}
+</body>
+</html>
